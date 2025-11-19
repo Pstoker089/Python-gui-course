@@ -6,13 +6,16 @@ root.title("Calender")
 
 def cal():
     rooty=Tk()
-    rooty.geometry("500x500")
+    rooty.geometry("510x600")
     rooty.title("Calender")
     year=int(yearchoice.get())
     calen=calendar.calendar(year)
-    #print(calen)
-    entirecal=Label(rooty,text=calen)
-    entirecal.grid(row=5,column=1)
+    print(calen)
+    #entirecal=Label(rooty,text=calen)
+    #entirecal.grid(row=5,column=1)
+    text_area = Text(rooty, font=("Consolas", 10),width=700, height=500)
+    text_area.insert(INSERT, calen)
+    text_area.grid(row=4, column=3)
     rooty.mainloop()
 
 
